@@ -26,6 +26,12 @@ carmen=# SELECT cl.language, cl.isofficial FROM countrylanguage cl JOIN country 
 -- to a different country, a country where people speak only the language she was learning. Find out which
 --  nearby country speaks nothing but that language.
 
+carmen=# SELECT name FROM countrylanguage cl JOIN country c ON c.code = cl.countrycode WHERE cl.language='Italian' AND c.region='Southern Europe' AND cl.percentage =100;
+    name
+------------
+ San Marino
+(1 row)
+
 
 
 -- Clue #4: We're booking the first flight out – maybe we've actually got a chance to catch her this time.
