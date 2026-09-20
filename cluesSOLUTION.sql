@@ -87,7 +87,13 @@ carmen=# SELECT ct.name FROM country c INNER JOIN city ct ON ct.id = c.capital W
 
 
 -- We're counting on you, gumshoe. Find out where she's headed, send us the info, and we'll be sure to meet her at the gates with bells on.
+carmen=# SELECT ct.name, c.name FROM city ct FULL JOIN country c ON c.code= ct.countrycode WHERE ct.population=91084;
+     name     |     name
+--------------+---------------
+ Santa Monica | United States
+(1 row)
 
 
 
--- She's in ____________________________!
+
+-- She's in ____Santa Monica ______!
