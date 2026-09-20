@@ -39,6 +39,13 @@ carmen=# SELECT name FROM countrylanguage cl JOIN country c ON c.code = cl.count
  -- would be too obvious. We're following our gut on this one; find out what other city in that country she might
  --  be flying to.
 
+carmen=# SELECT ct.name FROM country c LEFT JOIN city ct ON ct.countrycode= c.code WHERE c.name ='Sa
+n Marino' AND ct.name <> c.name;
+    name
+------------
+ Serravalle
+(1 row)
+
 
 
 -- Clue #5: Oh no, she pulled a switch – there are two cities with very similar names, but in totally different
