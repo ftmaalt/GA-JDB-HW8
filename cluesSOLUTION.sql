@@ -60,9 +60,16 @@ carmen=# SELECT ct.name, c.name AS coutry FROM city ct RIGHT JOIN country c ON c
 (2 rows)
 
 
+
 -- Clue #6: We're close! Our South American agent says she just got a taxi at the airport, and is headed towards
  -- the capital! Look up the country's capital, and get there pronto! Send us the name of where you're headed and we'll
  -- follow right behind you!
+
+carmen=# SELECT ct.name FROM country c INNER JOIN city ct ON ct.id = c.capital WHERE c.name ='Brazil';                     name
+------------
+ Bras∩┐╜lia
+(1 row)
+
 
 
 
